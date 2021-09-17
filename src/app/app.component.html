@@ -1,0 +1,27 @@
+<form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>enter items</ng-template>
+      <div style="display: flex; flex-direction: column;">
+        <mat-form-field>
+          <input matInput type="text" placeholder="category"  [(ngModel)]="newItem.CategoryName" formControlName="category"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="sub category"  [(ngModel)]="newItem.SubCategoryName" formControlName="subCategory"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" placeholder="product"  [(ngModel)]="newItem.ProductName" formControlName="name"/>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="newItem.Amount" type="number" min="0" placeholder="amount" formControlName="amount"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="newItem.Price" type="number" min="0" placeholder="price" formControlName="price"
+          />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="AddNewProduct(newItem)" style="float: left; align-self: flex-end;">submit</button>
+
+        
+      </div>
+    </form>
